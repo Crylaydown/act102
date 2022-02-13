@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate</title>
+
+<style>
+     body{
+            background-color: rgb(174, 204, 204)}
+    #box{
+        width: 300px;
+    padding: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background:rgba(0,0,0,0.4);
+    font-weight: 200;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-shadow: 10px 10px 50px white;
+    text-align: center;
+
+    }
+</style>
+    
+
+
+    
+</head>
+<body>
+    <div id="box">  
+<p id="input">Enter First Number: <input id="one">
+<br/><br/>
+Enter Second Number: <input id="two"></p>
+<p><button onclick="wews()">Add, Subtract, Multiply, Divide</button></p>
+<h1>
+   Result
+</h1>
+Addition  = <input id="add"><br/><br/>
+Subtraction  = <input id="subtract"><br/><br/>
+Multiplication  = <input id="multiply"><br/><br/>
+Division  = <input id="divide"><br/><br/>
+Modulo = <input id="Modulo"></p>
+
+
+</div>
+
+<script>
+    var num1, num2, res, p;
+    function wews()
+    {
+      num1 = parseFloat(document.getElementById("one").value);
+      num2 = parseFloat(document.getElementById("two").value);
+      if(num1 && num2)
+      {
+        p = document.getElementById("res");
+        
+        res = num1 + num2;
+        document.getElementById("add").value = res;
+        res = num1 - num2;
+        document.getElementById("subtract").value = res;
+        res = num1 * num2; 
+        document.getElementById("multiply").value = res;
+        res = num1 / num2;
+        document.getElementById("divide").value = res;
+        res = num1 % num2;
+        document.getElementById("Modulo").value = res;
+
+
+      }
+    }
+    </script>
+
+</body>
+</html>
